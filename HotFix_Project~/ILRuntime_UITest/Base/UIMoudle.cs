@@ -39,13 +39,13 @@ public class UIMoudle
     /// <param name="panelName"></param>
     /// <param name="action"></param>
     /// <typeparam name="T"></typeparam>
-    public void OpenPanel<T>(string panelName, Action<T> action = null) where T : UIBase, new()
+    public void OpenPanel<T>(Action<T> action = null) where T : UIBase, new()
     {
         //正常应该是从AssetBundle中接入，这里先暂且从resource中读取
-        var obj = Resources.Load<GameObject>(panelName);
+        var t = new T();
+        var obj = Resources.Load<GameObject>(t.path);
         if (obj == null) return;
         var go = Object.Instantiate(obj, UIEntrance.canvasTrans);
-        var t = new T();
         t.SetGameObj(go);
         OpenUI(t.path, t);
         action?.Invoke(t);
@@ -57,12 +57,12 @@ public class UIMoudle
     /// <param name="panelName"></param>
     /// <param name="action"></param>
     /// <typeparam name="T"></typeparam>
-    public void PopPanel<T>(string panelName, Action<T> action = null) where T : UIBase, new()
+    public void PopPanel<T>(Action<T> action = null) where T : UIBase, new()
     {
-        var obj = Resources.Load<GameObject>(panelName);
+        var t = new T();
+        var obj = Resources.Load<GameObject>(t.path);
         if (obj == null) return;
         var go = Object.Instantiate(obj, UIEntrance.canvasTrans);
-        var t = new T();
         t.SetGameObj(go);
         PopUI(t.path, t);
         action?.Invoke(t);

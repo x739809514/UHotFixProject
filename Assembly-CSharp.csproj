@@ -110,6 +110,7 @@
      <Folder Include="Assets\Scripts\Examples\11_ValueTypeBinding" />
      <Folder Include="Assets\Scripts\Examples\09_Reflection" />
      <Folder Include="Assets\Samples\ILRuntime\Generated" />
+     <Folder Include="Assets\Resources\UI" />
      <Folder Include="Assets\Scripts\Examples\02_Invocation" />
      <Folder Include="Assets\Scripts\Examples\08_MonoBehaviour" />
      <Folder Include="Assets\Scripts\Examples\01_HelloWorld" />

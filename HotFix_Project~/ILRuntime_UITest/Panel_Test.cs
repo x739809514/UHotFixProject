@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 class Panel_Test : UIBase
 {
-    public override string panelName => "Panel_Test";
+    public override string panelName => PanelName.Panel_Test;
 
     #region Field
 

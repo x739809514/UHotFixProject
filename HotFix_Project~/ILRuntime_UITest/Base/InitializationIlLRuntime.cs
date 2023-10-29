@@ -4,7 +4,7 @@
     {
         public void OnAwake()
         {
-            UIMoudle.Instance.OpenPanel<Panel_Test>(PanelName.Panel_Test);
+            UIMoudle.Instance.OpenPanel<Panel_Test>();
         }
 
         public void OnEnable()
